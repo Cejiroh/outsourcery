@@ -19,7 +19,9 @@
             color: #fff;
             overflow-x: hidden;
         }
-
+		#contactMessage, #failMessage{
+			display:none;
+		}
         /* Magical particle animation */
         .particles {
             position: fixed;
@@ -668,7 +670,7 @@
         <h1 style="text-align: center;">Let's Make the Magic Happen</h1>
         <p class="subheading" style="text-align: center;">Whether you're ready to summon your next support team or just exploring possibilities, we're here for it. Drop us a note and we'll get back—faster than you can say abracadabra.</p>
         
-        <form class="contact-form" id="contactForm">
+        <form class="contact-form" action="https://formspree.io/f/xeoznowd" method="POST" id="contactForm">
             <div class="form-group">
                 <label for="name">Name *</label>
                 <input type="text" id="name" name="name" required placeholder="Your magical name">
@@ -698,6 +700,15 @@
                 <button type="submit" class="magic-button">Cast the Spell <i class="fas fa-magic"></i></button>
             </div>
         </form>
+    </section>
+	<section id="contactMessage" class="fade-in contact-form"><center>
+	<h1>Message sent!</h1>
+	<p class="subheading"> We'll be in touch faster than you can say abracadabra.</p></center>
+    </section>
+	<section id="failMessage" class="fade-in cta"><center>
+		<h1><div class="error-message">
+	  Oops! Something went wrong.</h1>
+		<p class="subheading">Looks like the spell misfired. Please email us at <a href="mailto:summon@outsourcery.solutions" style="color: #fff; ">summon@outsourcery.solutions</a> and we’ll conjure a fix ASAP.</p></center>
     </section>
 
     <!-- Footer -->
@@ -809,25 +820,42 @@
                 }
             });
         });
+				
+		document.addEventListener("DOMContentLoaded", function () {
+		const form = document.getElementById("contactForm");
+		const formContainer = document.getElementById("contact");
+		const formMessage = document.getElementById("contactMessage");
+		const failMessage = document.getElementById("failMessage");
+		
 
-        // Form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Simple form validation and success message
-            const formData = new FormData(this);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const business = formData.get('business');
-            
-            if (name && email && business) {
-                alert('Magic spell cast successfully! We\'ll be in touch faster than you can say abracadabra!');
-                this.reset();
-            } else {
-                alert('Please fill in all required fields to complete the spell!');
-            }
-        });
+		form.addEventListener("submit", function (e) {
+		  e.preventDefault(); 
 
+		  const formData = new FormData(form);
+
+		  fetch("https://formspree.io/f/xeoznowd", {
+			method: "POST",
+			body: formData,
+			headers: {
+			  Accept: "application/json"
+			}
+		  })
+		  .then(response => {
+			if (response.ok) {
+			  formContainer.style.display = "none";
+			  formMessage.style.display = "block";
+			form.parentNode.insertBefore(message, form);
+			} else {
+			  failMessage.style.display = "block";
+			}
+		  })
+		  .catch(error => {
+			console.error("Form submission error:", error);
+			alert("There was an error sending your message.");
+		  });
+		});
+		});
+		
         // Header scroll effect
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
