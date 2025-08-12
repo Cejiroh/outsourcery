@@ -137,6 +137,7 @@
             color: white;
             font-size: 1.5rem;
             cursor: pointer;
+			padding-top: 10px;
         }
 
         @media (max-width: 768px) {
@@ -225,7 +226,7 @@
             color: white;
             text-decoration: none;
             border-radius: 50px;
-            font-weight: bold;
+            font-weight: 300;
             font-size: 1.1rem;
             transition: all 0.3s ease;
             position: relative;
@@ -451,15 +452,25 @@
             margin-top: 6rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
+		
+		.footer-content {
+			margin: 0 auto;
+			align-items: center;
+			justify-content: center; 
+            max-width: 1300px;
+			display: grid;
+			grid-template-areas:
+				"one two three four";
+			grid-template-columns: 2fr 4fr 3fr 2fr;
+			gap: 1rem;
+		}
 
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
+		.footer-content > div:nth-child(1) { grid-area: one; }
+		.footer-content > div:nth-child(2) { grid-area: two; }
+		.footer-content > div:nth-child(3) { grid-area: three; }
+		.footer-content > div:nth-child(4) { grid-area: four; }
 
+		
         .footer-section h4 {
             color: #fff;
             margin-bottom: 1rem;
@@ -504,6 +515,32 @@
 				padding: 3rem;
 				text-align: center;
 			}
+			
+			.magic-button {
+				padding: 0.5rem 1rem;
+				background-size: 200% 100%;
+				text-decoration: none;
+				font-weight: 300;
+				font-size: 1rem;
+			}
+			 .footer-content {
+				grid-template-areas:
+				  "one"
+				  "two"
+				  "three"
+				  "four";
+				grid-template-columns: 1fr;
+				text-align: center;
+			  }
+
+			  .footer-content > div {
+				margin-bottom: 1rem;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+			  }
         }
 
         /* Scroll animations */
@@ -730,12 +767,15 @@
             <div class="footer-section">
                 <h4>Connect With Us</h4>
                 <div class="social-links">
-                    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
-                    <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/outsourcerysolutions/" target="_new" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/outsourcerysolutions/" target="_new" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/outsourcerysolutions/" target="_new" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://x.com/outsourcery_s" target="_new" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.tiktok.com/@outsourcery" target="_new" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.youtube.com/@outsourcerysolutions" target="_new" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.threads.com/@outsourcerysolutions" target="_new" title="Threads"><i class="fa-brands fa-threads"></i></a>
+                    <a href="https://www.pinterest.com/outsourcerysolutions/" target="_new" title="Pinterest"><i class="fa-brands fa-pinterest"></i></a> 
+					<a href="https://www.reddit.com/user/outsourcerysolutions/" target="_new" title="Reddit"><i class="fa-brands fa-reddit"></i></a>
                 </div>
             </div>
             
