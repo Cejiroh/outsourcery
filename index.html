@@ -27,42 +27,7 @@
 		#contactMessage, #failMessage{
 			display:none;
 		}
-        /* Magical particle animation */
-        .particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .particle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: #ffffff;
-            border-radius: 50%;
-            animation: twinkle 4s ease-in-out infinite;
-            opacity: 0;
-        }
-
-        .particle:nth-child(odd) {
-            background: #8b5cf6;
-            animation-duration: 3s;
-        }
-
-        .particle:nth-child(even) {
-            background: #e3474b;
-            animation-duration: 5s;
-        }
-
-        .particle:nth-child(3n) {
-            background: #ffffff;
-            animation-duration: 2.5s;
-        }
-
+       
         @keyframes twinkle {
             0%, 100% { 
                 opacity: 0;
@@ -559,11 +524,25 @@
             opacity: 1;
             transform: translateY(0);
         }
+		#bgVideo {
+		  position: fixed;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: auto;
+		  min-height: 100%;
+		  object-fit: cover;
+		  object-position: top;
+		  z-index: -1
+		}
     </style>
 </head>
 <body>
     <div class="particles" id="particles"></div>
-    
+    <!-- Background Video -->
+	<video autoplay muted loop id="bgVideo">
+	  <source src="videos/Background.mp4" type="video/mp4">
+	</video>
     <header>
         <nav class="nav-container">
             <img src="images/Hori Lavender Gray.png" alt="Outsourcery Logo" class="logo">
