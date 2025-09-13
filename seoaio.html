@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Found. Get Clicked. Get Results.</title>
+    <link rel="stylesheet" href="assets\css\fontawesome-all.min.css">
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+
+		<link rel="stylesheet" href="css/style.css" />
+
+</head>
+<body>
+	<video autoplay muted loop id="bgVideo">
+	  <source src="videos/Background.mp4" type="video/mp4">
+	</video>
+
+  <div id="header"></div>
+  <script>
+    async function loadHTML(id, file) {
+      const element = document.getElementById(id);
+      const response = await fetch(file);
+      if (response.ok) {
+        element.innerHTML = await response.text();
+      } else {
+        element.innerHTML = "Content not found.";
+      }
+    }
+
+    loadHTML("header", "header.html");
+  </script>
+    <section class="hero">
+        <div class="fade-in">
+            <h1>Get Found. Get Clicked. Get Results.</h1>
+            <p class="subheading"> AI Optimization + SEO that puts your business in front of people — and keeps you there.</p>
+            <a href="#contact" class="magic-button">Get My Free Website Audit <i class="fas fa-magic"></i></a>
+        </div>
+    </section>
+
+    <section id="services" class="fade-in services">
+        <h2 style="text-align: center;">Why Modern Businesses Need Both</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-search"></i></div>
+                <h3>Search Engine Optimization (SEO)</h3>
+                <ul class="service-list">
+                    <li>Search engine optimization improves visibility in Google and Bing by refining keywords, fixing technical gaps, and enhancing user experience. Strong SEO helps you attract more organic traffic and build authority.</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-robot"></i></div>
+                <h3>Artificial Intelligence Optimization (AIO)</h3>
+                <ul class="service-list">
+                    <li>Artificial intelligence optimization prepares your site for AI-driven search tools like ChatGPT, Bing Copilot, and Google SGE. With AIO, your brand is positioned to appear directly in AI-generated answers and recommendations.</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Data-Driven Analysis and Results</h3>
+                <ul class="service-list">
+                    <li>Every action we take is guided by measurable data, from page speed to search rankings. Our audits highlight exactly what is working, what needs improvement, and where the greatest opportunities lie.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+   <section class="carousel-container fade-in">
+        
+        <h2 style="text-align: center;">Proof That Optimization Works</h2>
+		
+        <div class="carousel-wrapper">
+            <div class="carousel-track" id="carouselTrack">
+                <div class="carousel-slide slide1">
+                    <div class="stat-card">
+                        <div><span class="stat-number">+42%</span>
+                        <h3 class="stat-title">Organic Traffic Growth</h3>
+                        <p class="stat-subtitle">Achieved after a combined SEO + AIO audit and implementation.</p></div>
+						<div><img src="images/42.png" /></div>
+                    </div>
+                </div>
+                
+                <div class="carousel-slide slide2">
+                    <div class="stat-card">
+                        <div><span class="stat-number">2.5×</span>
+                        <h3 class="stat-title">More Clicks from AI Results</h3>
+                        <p class="stat-subtitle">Optimized content clusters improved brand mentions in AI-generated answers.</p></div>
+						<div><img src="images/2.5x.png" /></div>
+                    </div>
+                </div>
+                
+                <div class="carousel-slide slide3">
+                    <div class="stat-card">
+					<div><span class="stat-number">3s</span>
+                        <h3 class="stat-title">Faster Page Load</h3>
+                        <p class="stat-subtitle">Reduced load time led to a 20% lift in conversions.</p></div>
+					<div><img src="images/3sec.png" /></div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="carousel-controls">
+            <button class="control-btn" onclick="previousSlide()">‹</button>
+            <button class="control-btn" onclick="nextSlide()">›</button>
+        </div>
+        
+        <div class="carousel-indicators">
+            <div class="indicator active" onclick="goToSlide(0)"></div>
+            <div class="indicator" onclick="goToSlide(1)"></div>
+            <div class="indicator" onclick="goToSlide(2)"></div>
+        </div>
+    </section>
+
+
+
+    <section id="why-us" class="fade-in">
+        <h2 style="text-align: center;">Our Process</h2>
+            <p class="subheading">How We Optimize for the Future of Search</p>
+        
+        <div class="why-us-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-chart-pie"></i></div>
+                <h3>Audit</h3>
+                <p>Comprehensive review of SEO health, technical performance, and AI readiness.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-tools"></i></div>
+                <h3>Implement</h3>
+                <p>Structured content, AI-tuned copy, and technical fixes for lasting visibility.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-cogs"></i></div>
+                <h3>Optimize</h3>
+                <p>Ongoing tracking, reporting, and refinement to stay ahead of algorithm changes.</p>
+            </div>
+            
+        </div>
+        
+    </section>
+	
+    <section class="fade-in cta">
+        <h2>Social Proof / Trust Signals</h2>
+        <p class="subheading">Trusted by Businesses Across Industries</p>
+    </section>
+
+
+    <section class="fade-in" style="text-align: center;">
+        <h2>Ready to See How Your Website Performs?</h2>
+        <p class="subheading">Your free audit highlights search rankings, site performance, and AI visibility.</p>
+                    <a href="#contact" class="magic-button">Get My Free Audit <i class="fas fa-magic"></i></a>
+    </section>
+ <!-- FAQ -->
+    <section class="faq fade-in">
+        <div class="container">
+		
+<h2 style="text-align: center;">Frequently Asked Questions</h2>
+<div class="faq-container">
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            What is Artificial Intelligence Optimization (AIO)?
+            <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+            Artificial Intelligence Optimization is the process of making your website visible and accessible to AI-driven platforms such as 
+            <a href="https://chat.openai.com/" target="_blank">ChatGPT</a>, 
+            <a href="https://www.bing.com/new" target="_blank">Bing Copilot</a>, and 
+            <a href="https://blog.google/products/search/generative-ai-search/" target="_blank">Google's Search Generative Experience</a>. 
+            It ensures your content is structured and relevant so AI tools can surface your brand when users ask questions.
+        </div>
+    </div>
+    
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            How is AIO different from traditional Search Engine Optimization (SEO)?
+            <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+            SEO improves rankings in traditional search engines like 
+            <a href="https://www.google.com/" target="_blank">Google</a> and 
+            <a href="https://www.bing.com/" target="_blank">Bing</a>, 
+            while AIO focuses on how AI systems present answers. SEO drives traffic from keyword searches; AIO helps your business appear in conversational AI responses. Both work together to maximize visibility.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            Why is AIO important right now?
+            <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+            AI-powered search and assistants are already influencing how people find information. Businesses that adapt early secure visibility before competitors do. Waiting risks losing traffic and brand presence as AI becomes the primary search interface.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            What's included in your free audit?
+            <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+            Our audit reviews your SEO health (keywords, site speed, backlinks, UX) and AIO readiness (structured data, Q&amp;A content, semantic keywords). You'll receive a clear report showing strengths, gaps, and opportunities for improvement.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            How long does it take to see results?
+            <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+            SEO improvements typically take weeks to months to gain traction, depending on competition. AIO updates can start showing visibility in AI-generated answers within days to weeks. Both strategies deliver compounding results over time.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            Do you work with small businesses or just large enterprises?
+            <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+            We support startups, SMEs, and established enterprises alike. Our solutions are scalable — tailored to your business size, goals, and budget. Whether you're a solo founder or a growing company, SEO + AIO can move the needle.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            Can you optimize my existing website, or do I need a new one?
+            <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+            Most businesses start by optimizing their current website. If the audit shows deeper structural issues, we may recommend a rebuild, but the goal is always to maximize performance with minimal disruption.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            Will AIO hurt my existing SEO rankings?
+            <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+            No. AIO complements SEO rather than competing with it. Optimizations like structured content, semantic keywords, and clear question-and-answer formatting strengthen both traditional rankings and AI visibility.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            How do you measure success for SEO + AIO?
+            <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+            We track SEO KPIs like keyword rankings, organic traffic, and conversions. For AIO, we measure brand mentions in AI-generated answers, click-throughs from AI search results, and shifts in AI content visibility over time.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            How do I get started?
+            <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+            Getting started is simple. Book your free SEO + AIO audit using the form on this page. We'll review your site, share a detailed report, and walk you through clear next steps — no commitment required.
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </section>
+	
+    <section id="contact" class="fade-in">
+        <h2 style="text-align: center;">Start Your Free SEO + AIO Audit</h2>
+        <p class="subheading" style="text-align: center;">See where your website stands today. Get a data-backed report on your site’s performance, visibility, and AI readiness — no commitment required.</p>
+        
+        <form class="contact-form" action="https://formspree.io/f/xeoznowd" method="POST" id="contactForm">
+            <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required placeholder="Your magical name">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required placeholder="your.email@magic.com">
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone (Optional)</label>
+                <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+            </div>
+            
+            <div class="form-group">
+                <label for="business">Business Name *</label>
+                <input type="text" id="business" name="business" required placeholder="Your enchanted business">
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message (Optional)</label>
+                <textarea id="message" name="message" rows="4" placeholder="Tell us about your magical needs..."></textarea>
+            </div>
+            
+            <div style="text-align: center;">
+                <button type="submit" class="magic-button">Cast the Spell <i class="fas fa-magic"></i></button>
+            </div>
+        </form>
+    </section>
+
+
+<div id="footer"></div>
+
+<script src="scripts/script.js" defer></script>
+</body>
+</html>

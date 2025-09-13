@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turn Browsers Into Buyers Across Every Marketplace</title>
+    <link rel="stylesheet" href="assets\css\fontawesome-all.min.css">
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+
+		<link rel="stylesheet" href="css/style.css" />
+
+</head>
+<body>
+	<video autoplay muted loop id="bgVideo">
+	  <source src="videos/Background.mp4" type="video/mp4">
+	</video>
+
+  <div id="header"></div>
+  <script>
+    async function loadHTML(id, file) {
+      const element = document.getElementById(id);
+      const response = await fetch(file);
+      if (response.ok) {
+        element.innerHTML = await response.text();
+      } else {
+        element.innerHTML = "Content not found.";
+      }
+    }
+
+    loadHTML("header", "header.html");
+  </script>
+    <section class="hero">
+        <div class="fade-in">
+            <h1>Turn Browsers Into Buyers Across Every Marketplace</h1>
+            <p class="subheading">From Amazon to Walmart to Etsy, we create optimized listings, content, and ads that grow your sales.</p>
+            <a href="#contact" class="magic-button">Get My Free E-Commerce Audit <i class="fas fa-magic"></i></a>
+        </div>
+    </section>
+
+    <section id="services" class="fade-in services">
+        <h2 style="text-align: center;">Why Business Owners Rely on Outsourcery VAs</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-images"></i></div>
+                <h3>Listing Optimization</h3>
+                <ul class="service-list">
+                    <li>We craft compelling product images, videos, and copy to increase click-throughs and conversions. Optimized listings win visibility and build trust with shoppers.</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-store"></i></div>
+                <h3>A+ Content and Brand Stores</h3>
+                <ul class="service-list">
+                    <li>Enhanced Brand Story pages and storefronts that elevate your brand presence on Amazon and beyond. Rich, engaging content builds credibility and boosts conversions.</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-project-diagram"></i></div>
+                <h3>Multi-Platform Experience</h3>
+                <ul class="service-list">
+                    <li>Proven results across Amazon, Walmart, and Etsy. We know how to adapt strategies for each platform’s unique rules, shoppers, and algorithms.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+   <section class="carousel-container fade-in">
+        
+        <h2 style="text-align: center;">Proof That Optimization Drives Sales</h2>
+		
+        <div class="carousel-wrapper">
+            <div class="carousel-track" id="carouselTrack">
+                <div class="carousel-slide slide1">
+                    <div class="stat-card">
+                        <div><span class="stat-number">+35%</span>
+                        <h3 class="stat-title">Sales Growth in 60 Days</h3>
+                        <p class="stat-subtitle">After listing copy + image overhaul.</p></div>
+						<div><img src="images/42.png" /></div>
+                    </div>
+                </div>
+                
+                <div class="carousel-slide slide2">
+                    <div class="stat-card">
+                        <div><span class="stat-number">2.2×</span>
+                        <h3 class="stat-title">Higher Conversions</h3>
+                        <p class="stat-subtitle">With A+ Content and Brand Store updates.</p></div>
+						<div><img src="images/2.5x.png" /></div>
+                    </div>
+                </div>
+                
+                <div class="carousel-slide slide3">
+                    <div class="stat-card">
+					<div><span class="stat-number">30%</span>
+                        <h3 class="stat-title">Ad Spend Efficiency Gain</h3>
+                        <p class="stat-subtitle">From Amazon Ads + DSP campaign</p></div>
+					<div><img src="images/3sec.png" /></div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="carousel-controls">
+            <button class="control-btn" onclick="previousSlide()">‹</button>
+            <button class="control-btn" onclick="nextSlide()">›</button>
+        </div>
+        
+        <div class="carousel-indicators">
+            <div class="indicator active" onclick="goToSlide(0)"></div>
+            <div class="indicator" onclick="goToSlide(1)"></div>
+            <div class="indicator" onclick="goToSlide(2)"></div>
+        </div>
+    </section>
+
+
+
+    <section id="why-us" class="fade-in">
+        <h2 style="text-align: center;">Our Process</h2>
+            <p class="subheading">How We Help You Scale Online</p>
+        
+        <div class="why-us-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-chart-pie"></i></div>
+                <h3>Audit</h3>
+                <p>Analyze current listings, brand assets, and ad performance across platforms.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-tools"></i></div>
+                <h3>Implement</h3>
+                <p>Redesign images, videos, and copy; build A+ content; enhance Brand Stores.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-cogs"></i></div>
+                <h3>Optimize</h3>
+                <p>Manage ads, improve ROI, and continuously refine based on marketplace data.</p>
+            </div>
+            
+        </div>
+        
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="#contact" class="magic-button">Start My Free E-Commerce Audit <i class="fas fa-magic"></i></a>
+        </div>
+    </section>
+	
+    <section class="fade-in cta">
+        <h2>Experience Across Every Industry</h2>
+        <p class="subheading">From fitness to beauty, home goods to tech, our team has optimized products in nearly every vertical. Our cross-industry experience means we know what converts — and how to apply it to your brand.</p>
+    </section>
+
+
+    <section class="fade-in" style="text-align: center;">
+        <h2>Ready to Unlock More Sales?</h2>
+        <p class="subheading">One quick audit can reveal where your listings, content, or ads are underperforming.</p>
+                    <a href="#contact" class="magic-button">Claim My Free E-Commerce Audit <i class="fas fa-magic"></i></a>
+    </section>
+ <!-- FAQ -->
+    <section class="faq fade-in">
+        <div class="container">
+		
+<h2 style="text-align: center;">Frequently Asked Questions</h2>
+<div class="faq-container">
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            What marketplaces do you support?
+            <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+            We work with <a href="https://www.amazon.com/" target="_blank">Amazon</a>, 
+            <a href="https://www.walmart.com/" target="_blank">Walmart</a>, and 
+            <a href="https://www.etsy.com/" target="_blank">Etsy</a>. 
+            Our strategies adapt to each platform’s unique algorithms and shopper behaviors.
+        </div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            What’s included in the free audit?
+            <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+            We review your product listings, images, copy, and ad performance. You’ll receive a clear report showing strengths, weaknesses, and opportunities for growth.
+        </div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            Do you only work with Amazon sellers?
+            <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+            No. While Amazon is a major focus, we also support 
+            <a href="https://www.walmart.com/" target="_blank">Walmart</a> and 
+            <a href="https://www.etsy.com/" target="_blank">Etsy</a> 
+            sellers with optimization and ad management.
+        </div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            What is A+ Content and why does it matter?
+            <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+            A+ Content allows brands to enhance product listings with richer images, copy, and design. It increases trust and typically improves conversions by 10–30%.
+        </div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            Can you help with Brand Store setup and design?
+            <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+            Yes. We create branded storefronts that showcase your catalog, improve cross-selling, and elevate customer experience.
+        </div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            Do you manage ads as well as listings?
+            <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+            Absolutely. We handle 
+            <a href="https://advertising.amazon.com/" target="_blank">Amazon Ads</a> 
+            and DSP campaigns to ensure your ad spend drives real ROI.
+        </div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            How long until I see results?
+            <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+            Many clients see improvements within 30–60 days. Optimizations like listing copy and images impact quickly, while ads and A+ content compound over time.
+        </div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            Do you support sellers in all industries?
+            <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+            Yes. We’ve worked across industries including fitness, beauty, tech, home goods, and more. Our broad experience helps us adapt best practices to your niche.
+        </div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            Can you create custom images and videos?
+            <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+            Yes. Our team creates professional product photography, graphics, and videos tailored to your brand and optimized for marketplace guidelines.
+        </div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            How do I get started?
+            <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+            Simply fill out the audit form on this page. We’ll review your listings, share insights, and walk you through recommendations — with no commitment.
+        </div>
+    </div>
+</div>
+
+                
+                </div>
+            </div>
+        </div>
+    </section>
+	
+    <section id="contact" class="fade-in">
+        <h2 style="text-align: center;">Start Your Free Listing Audit</h2>
+        <p class="subheading" style="text-align: center;">Discover how your product listings perform across Amazon, Walmart, and Etsy. Get a data-backed report on your content, A+ assets, and ad efficiency — no commitment required.</p>
+        
+        <form class="contact-form" action="https://formspree.io/f/xeoznowd" method="POST" id="contactForm">
+            <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required placeholder="Your magical name">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required placeholder="your.email@magic.com">
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone (Optional)</label>
+                <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+            </div>
+            
+            <div class="form-group">
+                <label for="business">Business Name *</label>
+                <input type="text" id="business" name="business" required placeholder="Your enchanted business">
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message (Optional)</label>
+                <textarea id="message" name="message" rows="4" placeholder="Tell us about your magical needs..."></textarea>
+            </div>
+            
+            <div style="text-align: center;">
+                <button type="submit" class="magic-button">Cast the Spell <i class="fas fa-magic"></i></button>
+            </div>
+        </form>
+    </section>
+
+
+<div id="footer"></div>
+
+<script src="scripts/script.js" defer></script>
+</body>
+</html>
