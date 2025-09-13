@@ -694,7 +694,6 @@
             color: #e3474b;
             margin-bottom: 1rem;
             display: block;
-            animation: pulse 4s ease-in-out infinite;
         }
         
         .stat-title {
@@ -774,14 +773,6 @@
             }
         }
         
-        @keyframes pulse {
-            0%, 10% {
-                text-shadow: 0 0 30px rgba(139, 92, 246, 0);
-            }
-            10% {
-                text-shadow: 0 0 40px rgba(139, 92, 246, 0), 0 0 60px rgba(139, 92, 246, 0);
-            }
-        }
         
         @keyframes shine {
             0% {
