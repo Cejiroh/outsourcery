@@ -663,6 +663,10 @@
             max-width: 1200px;
 			align-items: center;
 			justify-content: center;
+			background-image: url('../images/carouselbg.jpg');
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
         }
         .stat-card div{
             padding: 3rem 2rem;
